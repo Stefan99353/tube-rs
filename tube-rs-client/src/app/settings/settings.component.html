@@ -1,0 +1,37 @@
+<h1>Client Settings</h1>
+
+<section class="option-groups">
+    <div class="header">
+        <h2>Option Groups</h2>
+        <div class="button-container">
+            <button
+                mat-mini-fab
+                color="primary"
+                aria-label="Add Option Group"
+                class="add-button"
+                (click)="ShowAddOptionGroupModal()"
+            >
+                <mat-icon>add</mat-icon>
+            </button>
+            <button
+                mat-mini-fab
+                color="primary"
+                aria-label="Save Option Groups"
+                class="save-button"
+                (click)="SaveOptionGroups()"
+            >
+                <mat-icon>save</mat-icon>
+            </button>
+        </div>
+    </div>
+
+    <mat-tab-group mat-align-tabs="center">
+        <mat-tab *ngFor="let group of optionGroups" label="{{ group.name }}">
+            <app-default-options-list
+                [options]="group.options"
+                (add)="addOptionToGroup($event, group.id)"
+                (delete)="deleteOptionToGroup($event, group.id)"
+            ></app-default-options-list>
+        </mat-tab>
+    </mat-tab-group>
+</section>

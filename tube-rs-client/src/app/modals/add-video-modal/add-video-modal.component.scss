@@ -1,0 +1,23 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+}
+
+.modal-buttons {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: row;
+
+    .form-input {
+        flex: 1 1 auto;
+    }
+
+    .margin-right {
+        margin-right: 1rem;
+    }
+}

@@ -1,0 +1,154 @@
+[
+  {
+    "text": "Proxy",
+    "description": "Use the specified HTTP/HTTPS/SOCKS proxy. To enable SOCKS proxy, specify a proper scheme. For example socks5://127.0.0.1:1080/. Pass in an empty string (--proxy \"\") for direct connection.",
+    "flag": "--proxy",
+    "custom": true,
+    "flag_values": []
+  },
+  {
+    "text": "Socket Timeout",
+    "description": "Time to wait before giving up, in seconds.",
+    "flag": "--socket-timeout",
+    "custom": true,
+    "flag_values": []
+  },
+  {
+    "text": "Source Address",
+    "description": "Client-side IP address to bind to.",
+    "flag": "--source-address",
+    "custom": true,
+    "flag_values": []
+  },
+  {
+    "text": "IPv4",
+    "description": "Make all connections via IPv4",
+    "flag": "--force-ipv4",
+    "custom": false,
+    "flag_values": []
+  },
+  {
+    "text": "IPv6",
+    "description": "Make all connections via IPv6",
+    "flag": "--force-ipv6",
+    "custom": false,
+    "flag_values": []
+  },
+  {
+    "text": "Download Rate",
+    "description": "Maximum download rate in bytes per second (e.g. 50K or 4.2M).",
+    "flag": "--limit-rate",
+    "custom": true,
+    "flag_values": [
+      {
+        "name": "50 kB/s",
+        "value": "50K"
+      },
+      {
+        "name": "500 kB/s",
+        "value": "500K"
+      },
+      {
+        "name": "1 Mb/s",
+        "value": "1M"
+      },
+      {
+        "name": "5 Mb/s",
+        "value": "5M"
+      }
+    ]
+  },
+  {
+    "text": "Retries",
+    "description": "Number of retries",
+    "flag": "--retries",
+    "custom": true,
+    "flag_values": [
+      {
+        "name": "10",
+        "value": "10"
+      },
+      {
+        "name": "Infinite",
+        "value": "infinite"
+      }
+    ]
+  },
+  {
+    "text": "Fragment Retries",
+    "description": "Number of retries for a fragment",
+    "flag": "--fragment-retries",
+    "custom": true,
+    "flag_values": []
+  },
+  {
+    "text": "Skip unavailable Fragments",
+    "description": "Skip unavailable fragments",
+    "flag": "--skip-unavailable-fragments",
+    "custom": false,
+    "flag_values": []
+  },
+  {
+    "text": "Abort unavailable Fragment",
+    "description": "Abort downloading when some fragment is not available",
+    "flag": "--abort-on-unavailable-fragment",
+    "custom": false,
+    "flag_values": []
+  },
+  {
+    "text": "Keep Fragments",
+    "description": "Keep downloaded fragments on disk after downloading is finished. Fragments are erased by default.",
+    "flag": "--keep-fragments",
+    "custom": false,
+    "flag_values": []
+  },
+  {
+    "text": "Buffer Size",
+    "description": "Size of download buffer (e.g. 1024 or 16K) (default is 1024).",
+    "flag": "--buffer-size",
+    "custom": true,
+    "flag_values": []
+  },
+  {
+    "text": "No resize Buffer",
+    "description": "Do not automatically adjust the buffer size. By default, the buffer size is automatically resized from an initial value.",
+    "flag": "--no-resize-buffer",
+    "custom": false,
+    "flag_values": []
+  },
+  {
+    "text": "HTTP chunk size",
+    "description": "Size of a chunk for chuck-based HTTP downloading (e.g. 10485760 or 10M) (default is disabled). May be useful for bypassing bandwidth throttling imposed by a webserver (experimental).",
+    "flag": "--http-chunk-size",
+    "custom": true,
+    "flag_values": []
+  },
+  {
+    "text": "HLS Native",
+    "description": "Use the native HLS downloader instead of ffmpeg.",
+    "flag": "--hls-prefer-native",
+    "custom": false,
+    "flag_values": []
+  },
+  {
+    "text": "HLS ffmpeg",
+    "description": "Use ffmpeg instead of the native HLS downloader.",
+    "flag": "--hls-prefer-ffmpeg",
+    "custom": false,
+    "flag_values": []
+  },
+  {
+    "text": "External Downloader",
+    "description": "Use the specified external downloader. Currently supports aria2c, avconv, axel, curl, ffmpeg, httpie, wget.",
+    "flag": "--external-downloader",
+    "custom": true,
+    "flag_values": []
+  },
+  {
+    "text": "External Downloader Arguments",
+    "description": "Give these arguments to the external downloader.",
+    "flag": "--external-downloader-args",
+    "custom": true,
+    "flag_values": []
+  }
+]

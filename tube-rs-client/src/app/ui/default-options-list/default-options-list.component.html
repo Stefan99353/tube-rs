@@ -1,0 +1,15 @@
+<app-default-option
+    class="new-option"
+    [readOnly]="false"
+    [option]="newOption"
+    (action)="addOption($event)"
+>
+</app-default-option>
+
+<app-default-option
+    [readOnly]="true"
+    [option]="option"
+    (action)="deleteOption($event)"
+    *ngFor="let option of options"
+>
+</app-default-option>

@@ -1,0 +1,29 @@
+<mat-expansion-panel class="site-control" hideToggle>
+    <mat-expansion-panel-header>
+        <mat-panel-title>
+            Queued Videos
+        </mat-panel-title>
+    </mat-expansion-panel-header>
+    <mat-list>
+        <mat-list-item *ngFor="let video of queuedVideos">
+            {{ video.title }}
+        </mat-list-item>
+    </mat-list>
+</mat-expansion-panel>
+
+<mat-expansion-panel class="site-control" hideToggle>
+    <mat-expansion-panel-header>
+        <mat-panel-title>
+            Finished Videos
+        </mat-panel-title>
+    </mat-expansion-panel-header>
+    <mat-list>
+        <mat-list-item *ngFor="let video of finishedVideos">
+            {{ video.title }}
+        </mat-list-item>
+    </mat-list>
+</mat-expansion-panel>
+
+<button mat-fab color="primary" aria-label="Add Video" class="add-button" (click)="ShowAddModal()">
+    <mat-icon>add</mat-icon>
+</button>

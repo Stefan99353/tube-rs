@@ -1,0 +1,45 @@
+<mat-card class="card">
+    <form class="option-container" (ngSubmit)="onAction()">
+        <mat-form-field class="option-flag">
+            <mat-label>Flag</mat-label>
+            <input
+                matInput
+                placeholder="Flag"
+                [name]="'flag'"
+                [(ngModel)]="option.flag"
+                [disabled]="readOnly"
+            />
+        </mat-form-field>
+        <mat-form-field class="option-val">
+            <mat-label>Value</mat-label>
+            <input
+                matInput
+                placeholder="Value"
+                [name]="'val'"
+                [(ngModel)]="option.val"
+                [disabled]="readOnly"
+            />
+        </mat-form-field>
+
+        <button
+            type="submit"
+            mat-mini-fab
+            *ngIf="readOnly"
+            color="warn"
+            aria-label="Remove Option"
+            class="action-button"
+        >
+            <mat-icon>delete</mat-icon>
+        </button>
+        <button
+            type="submit"
+            mat-mini-fab
+            *ngIf="!readOnly"
+            color="primary"
+            aria-label="Add Option"
+            class="action-button"
+        >
+            <mat-icon>add</mat-icon>
+        </button>
+    </form>
+</mat-card>

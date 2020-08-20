@@ -1,0 +1,66 @@
+<div>
+    <h1 mat-dialog-title>Add Video</h1>
+    <div mat-dialog-content>
+        <form #addVideoForm="ngForm" class="container">
+            <div class="form-group">
+                <mat-form-field
+                    appearance="fill"
+                    class="form-input margin-right"
+                >
+                    <mat-label>Enter YouTube ID</mat-label>
+                    <input
+                        matInput
+                        name="id"
+                        placeholder="l2UktJtKpFw"
+                        [(ngModel)]="video.id"
+                        pattern='[^\s?&"]{11}'
+                        required
+                        (change)="onIdChange(addVideoForm.form)"
+                    />
+                </mat-form-field>
+                <mat-form-field appearance="fill" class="form-input">
+                    <mat-label>Choose Quality</mat-label>
+                    <input
+                        matInput
+                        name="quality"
+                        placeholder="best"
+                        [(ngModel)]="video.quality"
+                        required
+                    />
+                </mat-form-field>
+            </div>
+
+            <mat-form-field appearance="fill">
+                <mat-label>Enter Video Title</mat-label>
+                <input
+                    matInput
+                    name="title"
+                    placeholder="Title"
+                    [(ngModel)]="video.title"
+                    required
+                />
+            </mat-form-field>
+            <mat-tab-group
+                mat-align-tabs="center"
+                (selectedTabChange)="OptionGroupChanged($event)"
+            >
+                <mat-tab
+                    *ngFor="let group of optionGroups"
+                    label="{{ group.name }}"
+                >
+                    <app-default-options-list
+                        [options]="group.options"
+                    ></app-default-options-list>
+                </mat-tab>
+            </mat-tab-group>
+        </form>
+    </div>
+    <div mat-dialog-actions class="modal-buttons">
+        <button mat-button (click)="onNoClick()">Cancel</button>
+        <button mat-button (click)="onOkClick()" cdkFocusInitial>
+            Add
+        </button>
+    </div>
+</div>
+
+<ng-template> </ng-template>
